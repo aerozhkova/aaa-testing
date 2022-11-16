@@ -1,9 +1,10 @@
 from what_is_year_now import what_is_year_now
 from unittest.mock import patch
 from io import StringIO
+import pytest
 
 
-def test_urlopen_case1():
+def test_urlopen_format1():
     with patch('what_is_year_now.urllib.request.urlopen') \
             as mocked_urlopen_cases:
         mocked_urlopen_cases.return_value = \
@@ -12,7 +13,7 @@ def test_urlopen_case1():
         mocked_urlopen_cases.assert_called_once()
 
 
-def test_urlopen_case2():
+def test_urlopen_format2():
     with patch('what_is_year_now.urllib.request.urlopen') \
             as mocked_urlopen_cases:
         mocked_urlopen_cases.return_value = \
@@ -21,13 +22,11 @@ def test_urlopen_case2():
         mocked_urlopen_cases.assert_called_once()
 
 
-def test_urlopen_case3():
+def test_urlopen_other_format():
     with patch('what_is_year_now.urllib.request.urlopen') \
             as mocked_urlopen_cases:
         mocked_urlopen_cases.return_value = \
             StringIO('{"currentDateTime":"01/03/2019"}')
-        try:
-            assert what_is_year_now() == 2019
-        except ValueError:
-            pass
+        with pytest.raises(ValueError):
+            what_is_year_now()
         mocked_urlopen_cases.assert_called_once()
