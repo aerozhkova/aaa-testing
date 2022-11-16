@@ -1,0 +1,4 @@
+venv/
+.coverage
+tests/.pytest_cache
+.pytest_cache/
