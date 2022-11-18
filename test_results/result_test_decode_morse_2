@@ -4,6 +4,6 @@ rootdir: /Users/aerozhkova/PycharmProjects/aaa-testing
 plugins: cov-4.0.0
 collected 3 items
 
-tests/test_decode_morse.py ...                                           [100%]
+tests/test_decode_morse_2.py ...                                         [100%]
 
-============================== 3 passed in 0.05s ===============================
+============================== 3 passed in 0.02s ===============================

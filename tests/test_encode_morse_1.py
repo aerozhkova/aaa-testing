@@ -1,4 +1,3 @@
-# python -m doctest -o NORMALIZE_WHITESPACE -v tests/test_encode_morse.py
 import doctest
 
 LETTER_TO_MORSE = {
@@ -26,6 +25,9 @@ def encode(message: str) -> str:
 
     >>> encode('SOS') # doctest: +ELLIPSIS
     '... --- ...'
+
+    >>> encode('HELP') # doctest: +ELLIPSIS
+        '.... . .-.. .--.'
 
     >>> encode('Феникс') # doctest: +ELLIPSIS
     Traceback (most recent call last):
