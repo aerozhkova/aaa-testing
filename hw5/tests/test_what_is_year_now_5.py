@@ -1,4 +1,4 @@
-from what_is_year_now import what_is_year_now
+from hw5.what_is_year_now import what_is_year_now
 from unittest.mock import patch
 from io import StringIO
 import pytest
