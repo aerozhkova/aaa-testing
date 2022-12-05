@@ -1,4 +1,4 @@
-from morse import decode
+from hw5.morse import decode
 import pytest
 
 

@@ -1,4 +1,4 @@
 venv/
-.coverage
-tests/.pytest_cache
-.pytest_cache/
+hw5/.coverage
+hw5/tests/.pytest_cache
+hw5/.pytest_cache/

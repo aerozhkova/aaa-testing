@@ -1,4 +1,4 @@
-from one_hot_encoder import fit_transform
+from hw5.one_hot_encoder import fit_transform
 import pytest
 
 
