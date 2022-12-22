@@ -1,6 +1,5 @@
 # python -m pytest final_task_pizza/tests/test_pizza.py -v
 
-
 from final_task_pizza.pizza import Pizza
 
 

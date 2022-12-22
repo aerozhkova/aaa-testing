@@ -6,11 +6,11 @@ from final_task_pizza.pizza import Margherita
 
 def test_pick_up_l_xl():
     """ Checks function pick_up with L or XL pizza size.
-    Returns True if result is in range [5,10]. """
+    Returns True if result is in range [7,12]. """
 
     margherita = Margherita(size='L')
     actual = pick_up(margherita)
-    expected = range(5, 11)
+    expected = range(7, 13)
     assert actual in expected
 
 

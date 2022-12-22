@@ -6,11 +6,11 @@ from final_task_pizza.pizza import Margherita
 
 def test_deliver_l_xl():
     """ Checks function deliver with L or XL pizza size.
-    Returns True if result is in range [7,12]. """
+    Returns True if result is in range [5,10]. """
 
     margherita = Margherita(size='L')
     actual = deliver(margherita)
-    expected = range(7, 13)
+    expected = range(5, 11)
     assert actual in expected
 
 

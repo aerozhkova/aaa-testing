@@ -1,0 +1,8 @@
+python final_task_pizza/cli.py order Pepperoni L --delivery
+python final_task_pizza/cli.py menu
+
+tests:
+python -m pytest final_task_pizza/tests/test_bake.py -v
+python -m pytest final_task_pizza/tests/test_deliver.py -v
+python -m pytest final_task_pizza/tests/test_pickup.py -v
+python -m pytest final_task_pizza/tests/test_pizza.py -v

@@ -39,7 +39,7 @@ class Pizza:
         self.emoji = emoji
         self.ingredients = ingredients
 
-    def __eq__(self, other):
+    def __eq__(self, other: "Pizza") -> bool:
         """
         Returns True if two pizzas are equal else returns False.
         """
@@ -47,10 +47,9 @@ class Pizza:
         if sorted(self.ingredients) == sorted(other.ingredients) \
                 and self.name == other.name:
             return True
-        else:
-            return False
+        return False
 
-    def dict(self):
+    def dict(self) -> dict:
         """
         Return recipe as a dict.
         """
@@ -107,7 +106,7 @@ class Hawaiian(Pizza):
 
 if __name__ == '__main__':
     margherita_1 = Margherita(size='L')
-    margherita_2 = Margherita(size='L')
+    margherita_2 = Margherita(size='XL')
     pepperoni = Pepperoni(size='XL')
 
     print(margherita_1 == margherita_2)

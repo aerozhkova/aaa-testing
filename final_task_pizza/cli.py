@@ -1,6 +1,7 @@
 import click
 import random
-from pizza import Margherita, Pepperoni, Hawaiian
+from typing import Union
+from final_task_pizza.pizza import Margherita, Pepperoni, Hawaiian
 
 
 @click.group()
@@ -8,7 +9,7 @@ def cli():
     pass
 
 
-def log(pattern):
+def log(pattern: str):
     def decorator(func):
         def wrapper(func_input):
             func_res = func(func_input)
@@ -16,6 +17,7 @@ def log(pattern):
                 print(f'{pattern.format(func_res)}')
             else:
                 print(func_res)
+            return func_res
 
         return wrapper
 
@@ -23,7 +25,7 @@ def log(pattern):
 
 
 @log('🧑🏻‍🍳 Приготовили за {}с!')
-def bake(pizza):
+def bake(pizza: Union[Margherita, Pepperoni, Hawaiian]) -> Union[int, str]:
     """Bakes pizza"""
 
     if pizza.size == 'L':
@@ -35,7 +37,7 @@ def bake(pizza):
 
 
 @log('🛵 Доставили за {}с!')
-def deliver(pizza):
+def deliver(pizza: Union[Margherita, Pepperoni, Hawaiian]) -> Union[int, str]:
     """Delivers pizza"""
 
     if pizza.size in ['L', 'XL']:
@@ -45,7 +47,7 @@ def deliver(pizza):
 
 
 @log('🏠 Забрали за {}с!')
-def pick_up(pizza):
+def pick_up(pizza: Union[Margherita, Pepperoni, Hawaiian]) -> Union[int, str]:
     """Pick-up"""
 
     if pizza.size in ['L', 'XL']:
