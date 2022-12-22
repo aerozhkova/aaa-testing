@@ -2,3 +2,5 @@ venv/
 hw5/.coverage
 hw5/tests/.pytest_cache
 hw5/.pytest_cache/
+/final_task_pizza/.pytest_cache/
+/final_task_pizza/tests/.pytest_cache/
