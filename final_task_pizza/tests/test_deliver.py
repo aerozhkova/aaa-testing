@@ -5,8 +5,8 @@ from final_task_pizza.pizza import Margherita
 
 
 def test_deliver_l_xl():
-    """ Проверяет функцию bake при размере пиццы L.
-    Возвращает True, если результат входит в диапазон [3,6]."""
+    """ Checks function deliver with L or XL pizza size.
+    Returns True if result is in range [7,12]. """
 
     margherita = Margherita(size='L')
     actual = deliver(margherita)
@@ -15,8 +15,8 @@ def test_deliver_l_xl():
 
 
 def test_deliver_size_not_l_xl():
-    """ Проверяет функцию bake при другом размере пиццы (не L и XL).
-    Функция должна возвращать сообщение о неверном выборе размера."""
+    """ Checks function deliver with another pizza size (not L and XL).
+    Function must return a message about wrong choice of pizza size."""
 
     margherita = Margherita(size='M')
     actual = deliver(margherita)

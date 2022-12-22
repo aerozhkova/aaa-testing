@@ -5,8 +5,8 @@ from final_task_pizza.pizza import Pizza
 
 
 def test_pizza_eq_equal():
-    """ Проверяет метод __eq__ класса Pizza.
-    Метод должен возвращать True при сравнении одинаковых пицц."""
+    """ Checks method __eq__ of class Pizza.
+    Method must return True if pizzas are equal."""
 
     margherita_1 = Pizza(name='Margherita',
                          ingredients=['tomato sauce', 'mozzarella',
@@ -22,8 +22,8 @@ def test_pizza_eq_equal():
 
 
 def test_pizza_eq_not_equal():
-    """ Проверяет метод __eq__ класса Pizza.
-    Метод должен возвращать False при сравнении неодинаковых пицц."""
+    """ Checks method __eq__ of class Pizza.
+    Method must return False if pizzas are unequal."""
 
     margherita = Pizza(name='Margherita',
                        ingredients=['tomato sauce', 'mozzarella', 'tomatoes'],
@@ -37,8 +37,8 @@ def test_pizza_eq_not_equal():
 
 
 def test_pizza_dict():
-    """ Проверяет метод dict класса Pizza.
-    Метод должен возвращать рецепт в виде словаря. """
+    """ Checks method dict of class Pizza.
+    Method must return recipe as a dict. """
 
     hawaiian = Pizza(name='Hawaiian',
                      ingredients=['tomato sauce', 'mozzarella', 'chicken',

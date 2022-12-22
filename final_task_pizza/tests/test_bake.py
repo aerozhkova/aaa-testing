@@ -5,8 +5,8 @@ from final_task_pizza.pizza import Margherita
 
 
 def test_bake_l():
-    """ Проверяет функцию bake при размере пиццы L.
-    Возвращает True, если результат входит в диапазон [3,6]."""
+    """ Checks function bake with L pizza size.
+    Returns True if result is in range [3,6]."""
 
     margherita = Margherita(size='L')
     actual = bake(margherita)
@@ -15,8 +15,8 @@ def test_bake_l():
 
 
 def test_bake_xl():
-    """ Проверяет функцию bake при размере пиццы XL.
-    Возвращает True, если результат входит в диапазон [3,6]."""
+    """ Checks function bake with XL pizza size.
+    Returns True if result is in range [5,8]."""
 
     margherita = Margherita(size='XL')
     actual = bake(margherita)
@@ -25,8 +25,8 @@ def test_bake_xl():
 
 
 def test_bake_size_not_l_xl():
-    """ Проверяет функцию bake при другом размере пиццы (не L и XL).
-    Функция должна возвращать сообщение о неверном выборе размера."""
+    """ Checks function bake with another pizza size (not L and XL).
+    Function must return a message about wrong choice of pizza size."""
 
     margherita = Margherita(size='M')
     actual = bake(margherita)
